@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aBi-ld-YBH">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Start View Controller-->
+        <scene sceneID="ugZ-Bc-TQ5">
+            <objects>
+                <viewController id="aBi-ld-YBH" customClass="StartViewController" customModule="MemesFireBase" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kZS-dq-HAm"/>
+                        <viewControllerLayoutGuide type="bottom" id="aGp-AE-etB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Y6d-YT-5Ou">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="py1-jH-bzY">
+                                <rect key="frame" x="107.5" y="303.5" width="160" height="60"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Game Name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bal-2b-0lm">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="160" id="af1-WZ-f5V"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6o-9U-BST">
+                                        <rect key="frame" x="35" y="30" width="90" height="30"/>
+                                        <state key="normal" title="Create Game"/>
+                                        <connections>
+                                            <action selector="createGameButtonTappped:" destination="aBi-ld-YBH" eventType="touchUpInside" id="jrH-m4-H12"/>
+                                            <segue destination="bXi-lo-gk9" kind="show" id="tsd-6R-HV8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2f-ZL-LrU">
+                                <rect key="frame" x="172" y="613" width="30" height="30"/>
+                                <state key="normal" title="Join"/>
+                                <connections>
+                                    <action selector="joinGameButtonTapped:" destination="aBi-ld-YBH" eventType="touchUpInside" id="9MM-6X-Eun"/>
+                                    <segue destination="NoH-Ma-WwR" kind="show" id="oRW-hB-nqN"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oDl-cM-D9y">
+                                <rect key="frame" x="127.5" y="567" width="120" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="4vB-Pg-uSd"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aGp-AE-etB" firstAttribute="top" secondItem="L2f-ZL-LrU" secondAttribute="bottom" constant="24" id="5qp-r9-mvk"/>
+                            <constraint firstItem="py1-jH-bzY" firstAttribute="centerY" secondItem="Y6d-YT-5Ou" secondAttribute="centerY" id="7l2-ho-bQj"/>
+                            <constraint firstItem="L2f-ZL-LrU" firstAttribute="top" secondItem="oDl-cM-D9y" secondAttribute="bottom" constant="16" id="bwA-0P-Maj"/>
+                            <constraint firstItem="L2f-ZL-LrU" firstAttribute="centerX" secondItem="Y6d-YT-5Ou" secondAttribute="centerX" id="cZ7-BG-PHX"/>
+                            <constraint firstItem="oDl-cM-D9y" firstAttribute="centerX" secondItem="Y6d-YT-5Ou" secondAttribute="centerX" id="eFe-7z-Nwf"/>
+                            <constraint firstItem="py1-jH-bzY" firstAttribute="centerX" secondItem="Y6d-YT-5Ou" secondAttribute="centerX" id="ebf-yU-Xr2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gameNameTextView" destination="bal-2b-0lm" id="d4W-2M-MeA"/>
+                        <outlet property="playerNameTextField" destination="oDl-cM-D9y" id="lb2-nj-0K5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O8D-KF-3Mf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-506" y="194"/>
+        </scene>
+        <!--Join Table View Controller-->
+        <scene sceneID="CcY-hD-snW">
+            <objects>
+                <tableViewController id="NoH-Ma-WwR" customClass="JoinTableViewController" customModule="MemesFireBase" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="mNu-3e-Z8G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="pendingGameCell" id="Ybs-a1-ETX">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ybs-a1-ETX" id="1wn-0L-TWT">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="bXi-lo-gk9" kind="show" identifier="toGameWait" id="EwG-7a-r26"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="NoH-Ma-WwR" id="0WI-Wj-cMd"/>
+                            <outlet property="delegate" destination="NoH-Ma-WwR" id="BgT-sJ-dhc"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mb1-Wm-Kka" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-506" y="941"/>
+        </scene>
+        <!--Waiting Table View Controller-->
+        <scene sceneID="FMu-xd-ToH">
+            <objects>
+                <tableViewController id="bXi-lo-gk9" customClass="WaitingTableViewController" customModule="MemesFireBase" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ko6-Rd-OtK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="peX-AK-CFR">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="peX-AK-CFR" id="zx1-ad-az8">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bXi-lo-gk9" id="9fq-55-gln"/>
+                            <outlet property="delegate" destination="bXi-lo-gk9" id="sM9-hB-nKK"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tZb-Hd-410" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="287" y="940"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="EwG-7a-r26"/>
+    </inferredMetricsTieBreakers>
+</document>
